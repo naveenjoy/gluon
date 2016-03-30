@@ -13,3 +13,5 @@ oslo.i18n
 six>=1.9.0
 WSME>=0.6,<0.7
 pecan>=0.8.0
+pyang>=1.6
+pyangbind

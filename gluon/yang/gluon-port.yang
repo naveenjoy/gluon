@@ -1,0 +1,68 @@
+module gluon-port {
+
+namespace "http://openstack.com/ns/gloun";
+prefix gloun;
+
+container gluon-port {
+    leaf id {
+        type string;
+      }
+    leaf owner {
+        type string;
+      }
+    leaf mac-address {
+        type string;
+      }
+    leaf admin-state-up {
+        type string;
+      }
+    leaf status {
+        type string;
+      }
+    container binding-information {
+        leaf vnic-type {
+            type enumeration {
+               enum direct;
+               enum macvtap;
+               enum sriov;
+               enum PCI-full-device;
+              }
+            }
+        leaf host_id {
+           type string;
+         }
+       } 
+    leaf profile {
+        type string;
+       }
+    leaf vif_details {
+        type string;
+      }
+    leaf vif_type {
+        type string;
+      }
+    container addressing {
+        leaf ipaddress {
+            type string;
+         }
+        leaf gateway {
+           type string;
+          }
+        leaf subnet-prefix {
+           type string;
+           }
+         }
+    leaf vpn-instance-id {
+        type string;
+      }
+    leaf mtu {
+        type uint32;
+      }
+    leaf vlan-transparency {
+        type string;
+      }
+    leaf tenant-id {
+        type string;
+      }
+   }
+}
